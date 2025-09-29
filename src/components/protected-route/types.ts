@@ -1,3 +1,4 @@
 export type TProtectedRouteProps = {
-  children: React.ReactElement;
+  onlyUnAuth?: boolean;
+  children: React.ReactNode;
 };
