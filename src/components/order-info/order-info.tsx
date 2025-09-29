@@ -12,11 +12,11 @@ import {
 export const OrderInfo: FC = () => {
   const dispatch = useDispatch();
   const { number } = useParams();
-  const orderSelector = useSelector((store) => store.order);
-  const ingredientsSelector = useSelector((store) => store.ingredient);
 
-  const orderData = orderSelector.orderModalData;
-  const ingredients: TIngredient[] = ingredientsSelector.data;
+  const orderData = useSelector((store) => store.order.orderModalData);
+  const ingredients: TIngredient[] = useSelector(
+    (store) => store.ingredient.data
+  );
 
   useEffect(() => {
     dispatch(fetchOrder(Number(number)));

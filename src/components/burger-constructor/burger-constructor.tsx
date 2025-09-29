@@ -15,7 +15,7 @@ export const BurgerConstructor: FC = () => {
   const orderRequest = useSelector((store) => store.order.orderRequest);
   const orderModalData = useSelector((store) => store.order.orderModalData);
   const constructorItems = useSelector((store) => store.maker);
-  const { isAuthenticated } = useSelector((store) => store.user);
+  const isAuthenticated = useSelector((store) => store.user.isAuthenticated);
 
   const onOrderClick = () => {
     if (!constructorItems.bun || orderRequest) return;
