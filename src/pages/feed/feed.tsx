@@ -10,7 +10,6 @@ export const Feed: FC = () => {
 
   useEffect(() => {
     dispatch(fetchFeed());
-    console.log(data);
     if (error) {
       console.error(error);
     }
