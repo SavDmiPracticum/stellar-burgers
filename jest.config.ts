@@ -9,9 +9,7 @@ const config: Config = {
     '^.+\\.tsx?$': ['ts-jest', {}]
   },
   moduleNameMapper: {
-    '@api': '<rootDir>/src/utils/burger-api.ts',
-    '@auth': '<rootDir>/src/utils/auth.ts',
-    '@slices': '<rootDir>/src/services/slices'
+    '@api': '<rootDir>/src/utils/burger-api.ts'
   }
 };
 
