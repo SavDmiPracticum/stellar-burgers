@@ -22,7 +22,7 @@ interface TUserState {
   loginUserError: null | SerializedError;
 }
 
-const initialState: TUserState = {
+export const initialState: TUserState = {
   isAuthChecked: false,
   isAuthenticated: false,
   user: {
@@ -168,3 +168,5 @@ export const userSlice = createSlice({
 
 export const { setIsAuthChecked } = userSlice.actions;
 export const { getIsAuthChecked } = userSlice.selectors;
+
+export default userSlice.reducer;

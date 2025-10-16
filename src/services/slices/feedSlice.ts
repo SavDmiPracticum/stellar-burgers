@@ -12,7 +12,7 @@ interface TFeedState {
   error: null | SerializedError;
 }
 
-const initialState: TFeedState = {
+export const initialState: TFeedState = {
   data: {
     orders: [],
     total: 0,
@@ -48,3 +48,5 @@ export const feedSlice = createSlice({
       });
   }
 });
+
+export default feedSlice.reducer;
