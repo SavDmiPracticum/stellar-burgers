@@ -26,10 +26,6 @@ export const makerSlice = createSlice({
         (item) => item.id !== action.payload
       );
     },
-    clearConstructor: (state) => {
-      state.bun = null;
-      state.ingredients = [];
-    },
     reorderIngredients(
       state,
       action: PayloadAction<{ index: number; upwards: boolean }>
@@ -57,7 +53,8 @@ export const {
   addBun,
   addIngredient,
   removeIngredient,
-  clearConstructor,
   reorderIngredients,
   resetConstructor
 } = makerSlice.actions;
+
+export default makerSlice.reducer;

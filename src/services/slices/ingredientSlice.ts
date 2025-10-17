@@ -12,7 +12,7 @@ interface TIngredientState {
   error: null | SerializedError;
 }
 
-const initialState: TIngredientState = {
+export const initialState: TIngredientState = {
   data: [],
   loading: true,
   error: null
@@ -44,3 +44,5 @@ export const ingredientSlice = createSlice({
       });
   }
 });
+
+export default ingredientSlice.reducer;

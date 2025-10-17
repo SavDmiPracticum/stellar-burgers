@@ -85,3 +85,5 @@ export const orderSlice = createSlice({
 });
 
 export const { resetOrderModalData } = orderSlice.actions;
+
+export default orderSlice.reducer;
